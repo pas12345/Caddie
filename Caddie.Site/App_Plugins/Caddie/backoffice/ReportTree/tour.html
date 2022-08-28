@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <umb-panel ng-controller="ReportTourController">
+        <umb-header>
+            <h1><span class="icon-pulse"></span>Udskrift for tilmelding til tur/match</h1>
+        </umb-header>
+        <div class="umb-panel-body">
+            <div class="umb-pane">
+                <form class="form-horizontal" role="form">
+
+                    <div class="input-group">
+                        <select class="form-control" id="selectTour" ng-model="tour.Id"
+                                ng-options="md.Id as md.StringValue for md in tours"
+                                ng-change="TourChange()"></select>
+                        <label>{{tour.Description}}</label>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" ng-click="Print()">Udskriv</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <label>{{message}}</label>
+        </div>
+    </umb-panel>
+</div>

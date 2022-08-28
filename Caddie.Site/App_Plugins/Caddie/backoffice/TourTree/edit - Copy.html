@@ -1,0 +1,136 @@
+﻿<umb-panel ng-controller="TourController">
+    <umb-header>
+        <div class="span4">
+            <input type="text"
+                   class="umb-headline"
+                   localize="placeholder"
+                   required
+                   select-on-focus
+                   placeholder="@placeholders_entername"
+                   ng-model="tour.Description" />
+        </div>
+        <div class="span8">
+            <div class="btn-toolbar pull-right umb-btn-toolbar">
+                <a href class="btn btn-primary" ng-click="save(event)" prevent-default>Gem</a>
+            </div>
+        </div>
+    </umb-header>
+
+    <div class="umb-panel-body">
+        <div class="umb-pane">
+            <form>
+
+                <div class="control-group">
+                    <label class="control-label span3" for="startDate">Dato</label>
+                    <div class="umb-editor umb-datepicker" ng-controller="Caddie.DatepickerController" id="startDate">
+                        <div class="input-append date datepicker">
+                            <input name="datepicker"
+                                   data-format="DD-MM-YYYY"
+                                   id="startDate"
+                                   type="text"
+                                   ng-model="tour.StartDate"
+                                   ng-required
+                                   val-server="value"
+                                   class="datepickerinput ng-pristine ng-valid ng-valid-required">
+                            <span class="add-on">
+                                <i class="icon-calendar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label span3" for="inputText">Tekst</label>
+                    <div class="controls">
+                        <input type="text" id="inputText" placeholder=""
+                               ng-model="tour.Description" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label span3" for="lastRegistrationDate">Sidste tilmelding</label>
+                    <div class="umb-editor umb-datepicker" ng-controller="Caddie.DatepickerController" id="lastRegistrationDate">
+                        <div class="input-append date datepicker">
+                            <input name="lastRegistrationDate" 
+                                   id="lastRegistrationDate"
+                                   data-format="DD-MM-YYYY" 
+                                   type="text" 
+                                   ng-model="tour.LastRegistrationDate" 
+                                   ng-required
+                                   val-server="value"
+                                   class="datepickerinput ng-pristine ng-valid ng-valid-required"/>
+                            <span class="add-on">
+                                <i class="icon-calendar"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+ <!--
+                <div class="umb-el-wrap">
+                    <label ng-if="hideLabel!=='true'" class="control-label ng-scope ng-binding" for="">
+                        Gældende fra
+                        <small class="ng-binding">Enter the persons last name</small>
+                    </label>
+                    <div class="controls controls-row" ng-transclude="">
+                        <div ng-include="property.View" class="ng-scope">
+                            <div ng-controller="UIOMatic.Views.DateTime" class="ng-scope">
+                                <div class="input-append date datepicker" style="position: relative;" id="datepickerGældende fra">
+                                    <input name="datepicker" data-format="YYYY-MM-DD" type="text"
+                                           ng-model="property.Value" class="ng-pristine ng-valid">
+                                    <span class="add-on">
+                                        <i class="icon-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        -->
+
+                <div class="control-group">
+                    <label class="control-label span3" for="openForSignUp">Åben for tilmelding</label>
+                    <div class="controls">
+                        <input type="checkbox" id="openForSignUp" 
+                               ng-model="tour.OpenForSignUp" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label span3" for="inputMaxNo">Max antal</label>
+                    <div class="controls">
+                        <input type="number" id="inputMaxNo" placeholder="000"
+                               ng-model="tour.MaxNoOfMembers" />
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label span3" for="noOfMembers">Antal tilmeldte</label>
+                    <div class="controls">
+                        <input type="number" id="noOfMembers" placeholder="000"
+                               ng-model="tour.NoOfMembers" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label span3" for="urlDescription">Link til beskrivelse</label>
+                    <div class="controls" >
+                        <input type="number" id="urlDescription" placeholder="000"
+                               ng-model="tour.UrlDescription" />
+                        <a ng-if="!node" href="" ng-click="openContentPicker()" prevent-default="" class="ng-scope">
+                            <localize key="general_choose" class="ng-isolate-scope ng-scope">Choose</localize>...
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-8">
+                        <span>{{message}}</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</umb-panel>

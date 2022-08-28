@@ -1,0 +1,13 @@
+C:\websites\Caddie\MSReports\bin\Debug\Reports\MatchDetail.rdlc
+C:\websites\Caddie\MSReports\bin\Debug\Reports\MatchPlayerList.rdlc
+C:\websites\Caddie\MSReports\bin\Debug\MSReports.dll.config
+C:\websites\Caddie\MSReports\bin\Debug\MSReports.dll
+C:\websites\Caddie\MSReports\bin\Debug\MSReports.pdb
+C:\websites\Caddie\MSReports\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\websites\Caddie\MSReports\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\websites\Caddie\MSReports\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.csproj.CoreCompileInputs.cache
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.dll
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.pdb
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.csprojAssemblyReference.cache
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.csproj.CopyComplete

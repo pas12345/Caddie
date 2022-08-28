@@ -1,0 +1,15 @@
+C:\websites\MS2016\Caddie.Api\Caddie.Data\bin\Debug\Caddie.Data.dll
+C:\websites\MS2016\Caddie.Api\Caddie.Data\bin\Debug\Caddie.Data.pdb
+C:\websites\MS2016\Caddie.Api\Caddie.Data\obj\Debug\Caddie.Data.dll
+C:\websites\MS2016\Caddie.Api\Caddie.Data\obj\Debug\Caddie.Data.pdb
+C:\websites\MS2016\Caddie.Api\Caddie.Data\obj\Debug\Caddie.Data.csprojResolveAssemblyReference.cache
+C:\websites\MS2016\Caddie\Caddie.Data\bin\Debug\Caddie.Data.dll
+C:\websites\MS2016\Caddie\Caddie.Data\bin\Debug\Caddie.Data.pdb
+C:\websites\MS2016\Caddie\Caddie.Data\obj\Debug\Caddie.Data.csprojResolveAssemblyReference.cache
+C:\websites\MS2016\Caddie\Caddie.Data\obj\Debug\Caddie.Data.dll
+C:\websites\MS2016\Caddie\Caddie.Data\obj\Debug\Caddie.Data.pdb
+C:\websites\Caddie\Caddie.Data\bin\Debug\Caddie.Data.dll
+C:\websites\Caddie\Caddie.Data\bin\Debug\Caddie.Data.pdb
+C:\websites\Caddie\Caddie.Data\obj\Debug\Caddie.Data.csproj.CoreCompileInputs.cache
+C:\websites\Caddie\Caddie.Data\obj\Debug\Caddie.Data.dll
+C:\websites\Caddie\Caddie.Data\obj\Debug\Caddie.Data.pdb

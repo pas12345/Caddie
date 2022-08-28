@@ -1,0 +1,200 @@
+﻿<form ng-submit="submit()" class="umb-panel form-horizontal umb-panel-nobody" ng-controller="ResultController">
+    <div id="resultEdit_container_header" class="umb-panel-header">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1 class="headline">Resultat registrering</h1>
+                <h1 class="headline">{{match.MatchDate | date:'d. MMM yyyy'}}: {{matchText}}</h1>
+            </div>
+            <div class="span4">
+                <div class="btn-toolbar umb-btn-toolbar">
+                    <div id="body_body_ctl04_group" class="btn-group">
+                        <a id="body_save" title="Save" class="btn btn-default btn" ng-click="submit()">Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="umb-pane " style="padding:10px;text-align:left;">
+        <div class="control-group umb-control-group" style="padding:10px;text-align:left;">
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="EnterVgcNo">Vgc Nr.</label>
+                <div class="controls controls-row">
+                    <input type="number" class="form-control" id="EnterVgcNo" placeholder="Vgc nr."
+                           ng-model="result.VgcNo" ng-change="PlayerChange()" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary" ng-click="GetResult(result.VgcNo)">Hent</button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="EnterVgcNo"> - eller vælg</label>
+                <div class="controls controls-row">
+                    <select class="form-control" id="selectPlayer" ng-model="result.VgcNo"
+                            ng-options="md.VgcNo as md.FullName2 for md in results"
+                            ng-change="PlayerChange()"></select>
+                </div>
+            </div>
+
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputHcpIndex">HcpIndex</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputHcpIndex"
+                           name="inputHcpIndex"
+                           type="number"
+                           placeholder="00"
+                           ng-model="result.HcpIndex"
+                           readonly>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-class="{'has-error':resultForm.inputHcp.$invalid &&
+                                    resultForm.inputHcp.$dirty}">
+                <label class="control-label" for="inputHcp">Hcp</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputHcp"
+                           name="inputHcp"
+                           type="number"
+                           placeholder="00"
+                           ng-model="result.Hcp"
+                           required>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-show="showHallington"
+                 ng-class="{'has-error':resultForm.inputHallington.$invalid &&
+                        resultForm.inputHallington.$dirty}">
+                <label class="control-label" for="inputHallington">Hallington</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputHallington"
+                           name="inputHallington"
+                           type="number"
+                           placeholder="00"
+                           ng-model="result.Hallington"
+                           ng-required="showHallington">
+                </div>
+            </div>
+
+
+            <div class="umb-el-wrap" ng-show="showNetto"
+                 ng-class="{'has-error':resultForm.inputNetto.$invalid &&
+                        resultForm.inputNetto.$dirty}">
+                <label class="control-label" for="inputNetto">Netto</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputNetto"
+                           name="inputNetto"
+                           type="number"
+                           placeholder="000"
+                           ng-model="result.Netto"
+                           ng-required="showNetto">
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-show="showBrutto"
+                 ng-class="{'has-error':resultForm.inputBrutto.$invalid &&
+                        resultForm.inputBrutto.$dirty}">
+                <label class="control-label" for="inputBrutto">Brutto</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputBrutto"
+                           name="inputBrutto"
+                           type="number"
+                           placeholder="000"
+                           ng-model="result.Brutto"
+                           ng-change="onBruttoChanged()"
+                           ng-required="showBrutto">
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-class="{'has-error':resultForm.inputPoints.$invalid &&
+                                    resultForm.inputPoints.$dirty}">
+                <label class="control-label" for="inputPoints">Points</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputPoints"
+                           name="inputPoints"
+                           type="number"
+                           placeholder="00"
+                           ng-model="result.Points"
+                           required>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-show="showPut"
+                 ng-class="{'has-error':resultForm.inputPuts.$invalid &&
+                                resultForm.inputPuts.$dirty}">
+                <label class="control-label" for="inputPoints">Puts</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputPuts"
+                           name="inputPuts"
+                           type="number"
+                           placeholder="00"
+                           ng-model="result.Puts"
+                           ng-required="showPut">
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-class="{'has-error':resultForm.inputShootOut.$invalid &&
+                                resultForm.inputShootOut.$dirty}">
+                <label class="control-label" for="inputShootOut">ShootOut</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputShootOut"
+                           name="inputShootOut"
+                           type="number"
+                           placeholder="0"
+                           ng-model="result.Shootout">
+                </div>
+            </div>
+
+            <div class="umb-el-wrap" ng-class="{'has-error':resultForm.inputBirdies.$invalid &&
+                                resultForm.inputBirdies.$dirty}">
+                <label class="control-label" for="inputBirdies">Birdies</label>
+                <div class="controls controls-row">
+                    <input class=""
+                           id="inputBirdies"
+                           name="inputBirdies"
+                           type="number"
+                           placeholder="0"
+                           ng-model="result.Birdies">
+                </div>
+            </div>
+
+            <div class="umb-pane " style="">
+                <div class="umb-el-wrap">
+                    <label class="control-label" for="inputDining">Spiser med</label>
+                    <div class="controls controls-row">
+                        <input class=""
+                               id="inputDining"
+                               name="inputDining"
+                               type="checkbox"
+                               ng-model="result.Dining">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="umb-panel-footer">
+                <div class="umb-el-wrap umb-panel-buttons">
+                    <div class="btn-toolbar umb-btn-toolbar pull-right">
+                        <a class="btn" id="toList" href="#/caddie/resultTree/resultlist/{{match.Id}}">
+                            Tilbage til listen
+                        </a>
+
+                        <div class="btn-group dropup">
+                            <!-- primary button -->
+                            <a class="btn btn-success" href="" ng-click="submit()">Gem</a>
+                            <a class="btn btn-error" ng-click="clear()">Slet score</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

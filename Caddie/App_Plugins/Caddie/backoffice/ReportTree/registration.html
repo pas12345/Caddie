@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <umb-panel ng-controller="ReportMatchController">
+        <umb-header>
+            <h1><span class="icon-pulse"></span>Udskrift af tilmeldingsliste til match</h1>
+        </umb-header>
+        <div class="umb-panel-body">
+            <div class="umb-pane">
+                <form class="form-horizontal" role="form">
+
+                    <div class="input-group">
+                        <select class="form-control" id="selectMatch" ng-model="match.Id"
+                                ng-options="md.Id as md.StringValue for md in matches"
+                                ng-change="MatchChange()"></select>
+                        <label>{{match.MatchText}}</label>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" ng-click="Print()">Udskriv</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <label>{{message}}</label>
+        </div>
+    </umb-panel>
+</div>

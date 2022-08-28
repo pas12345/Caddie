@@ -1,0 +1,61 @@
+﻿<div class="umb-editor umb-listview" ng-controller="CourseListController">
+    <style>
+        canvas {
+            width: 100% !important;
+            max-width: 800px;
+            height: auto !important;
+        }
+    </style>
+
+    <div class="row-fluid">
+        <div class="umb-sub-header">
+            <h1>{{club.name}}</h1>
+
+            <div class="btn-group">
+                <a class="btn" href="#/caddie/courseTree/createCourse/{{club.id}}">
+                    <localize key="actions_create">Create</localize>
+                    <span class="caret"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div ng-if="club.courses.length > 0">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Bane</td>
+                        <td>Par</td>
+                        <td>Tee</td>
+                        <td>CR</td>
+                        <td>Slope</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="item in club.courses">
+                        <td>
+                            <a href="#/caddie/courseTree/editCourse/{{item.Id}}" ng-bind-html="item.CourseName" />
+                        </td>
+                        <td>
+                            {{item.Par}}
+                        </td>
+                        <td>
+                            {{item.Tee}}
+                        </td>
+                        <td>
+                            {{item.CourseRating}}
+                        </td>
+                        <td>
+                            {{item.Slope}}
+                        </td>
+                    </tr>
+                </tbody>
+
+             </table>
+        </div>
+        <div class="no-items" ng-if="club.courses.length == 0">
+            Ingen baner oprettet
+        </div>
+    </div>
+</div>

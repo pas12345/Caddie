@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="242a7d26-1efc-4d12-8510-27cf7d8eca26" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.golfbox.dk/web/services/webservice/group.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="group.wsdl" MetadataType="Wsdl" ID="f1022f81-ac93-45f8-92ed-cb27c00eb055" SourceId="1" SourceUrl="http://www.golfbox.dk/web/services/webservice/group.asmx?wsdl=wsdl1" />
+    <MetadataFile FileName="group1.wsdl" MetadataType="Wsdl" ID="bed8115c-0322-49c4-a863-9c567095d995" SourceId="1" SourceUrl="http://www.golfbox.dk/web/services/webservice/group.asmx?wsdl" />
+    <MetadataFile FileName="schema1.xsd" MetadataType="Schema" ID="3220ef29-4e7b-4c34-b83c-88269a9ac020" SourceId="1" SourceUrl="http://www.golfbox.dk/web/services/webservice/group.asmx?schema=schema1" />
+    <MetadataFile FileName="schema2.xsd" MetadataType="Schema" ID="46a1be73-2e0d-47c3-93ce-2b8d7aeb19a5" SourceId="1" SourceUrl="http://www.golfbox.dk/web/services/webservice/group.asmx?schema=schema2" />
+    <MetadataFile FileName="group.disco" MetadataType="Disco" ID="a9edae10-d17c-43d6-a996-9f7132f0255e" SourceId="1" SourceUrl="http://www.golfbox.dk/web/services/webservice/group.asmx?disco" />
+    <MetadataFile FileName="schema3.xsd" MetadataType="Schema" ID="d0efc515-f67b-4495-9049-6da19f68d123" SourceId="1" SourceUrl="http://www.golfbox.dk/web/services/webservice/group.asmx?schema=schema3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

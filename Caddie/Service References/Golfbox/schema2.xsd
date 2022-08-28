@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://golfbox.net/web/services/webservice" elementFormDefault="qualified" targetNamespace="http://golfbox.net/web/services/webservice" id="schema2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UserCredentials" type="tns:UserCredentials" />
+  <xs:complexType name="UserCredentials">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Account" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Username" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Password" type="xs:string" />
+    </xs:sequence>
+    <xs:anyAttribute />
+  </xs:complexType>
+</xs:schema>

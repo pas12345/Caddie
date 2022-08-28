@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://golfbox.net/web/services/webservice/group" elementFormDefault="qualified" targetNamespace="http://golfbox.net/web/services/webservice/group" id="schema1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://microsoft.com/wsdl/types/" />
+  <xs:element name="SetGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GroupXML">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SetGroupResult">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GroupType" type="tns:GroupType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="GroupType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="Static" />
+      <xs:enumeration value="Invoice" />
+      <xs:enumeration value="Dynamic" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetGroupNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetGroupNamesResult" type="tns:GroupNameList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GroupNameList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfGroupNameItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfGroupNameItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupNameItem" nillable="true" type="tns:GroupNameItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GroupNameItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Members" type="tns:ArrayOfGroupMember" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element xmlns:q1="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="GUID" type="q1:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfGroupMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupMember" nillable="true" type="tns:GroupMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GroupMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Handicap" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Sex" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Birthday" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MemberNumber" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HandicapDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetGroupMembers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="GroupGUID" type="q2:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupMembersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetGroupMembersResult" type="tns:GroupNameList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

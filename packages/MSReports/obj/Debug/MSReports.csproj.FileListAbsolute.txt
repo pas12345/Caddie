@@ -1,0 +1,11 @@
+C:\websites\Caddie\MSReports\bin\Debug\MSReports.pdb
+C:\websites\Caddie\MSReports\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\websites\Caddie\MSReports\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\websites\Caddie\MSReports\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.csprojResolveAssemblyReference.cache
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.dll
+C:\websites\Caddie\MSReports\obj\Debug\MSReports.pdb
+C:\websites\Caddie\MSReports\obj\Debug\RdlCompile.cache
+C:\websites\Caddie\MSReports\obj\Debug\RdlCompile.compiled
+C:\websites\Caddie\MSReports\bin\Debug\MSReports.dll.config
+C:\websites\Caddie\MSReports\bin\Debug\MSReports.dll

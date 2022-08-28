@@ -1,0 +1,12 @@
+﻿<div ng-controller="PlayerHcpController">
+    <div class="umb-pane">
+        <h1>{{currentNode.name}}</h1>
+        <p>
+            Opdaterede Hcp's hentes efter sekretarieatet har opdateret dem. 
+        </p>
+        <p class="text-warning">{{message}}</p>
+        <div class="btn-toolbar pull-right umb-btn-toolbar">
+            <a href="" class="btn btn-primary" ng-click="getUpdatedHcp()" prevent-default>Opdater Hcp fra Golfbox</a>
+        </div>
+    </div>
+</div>

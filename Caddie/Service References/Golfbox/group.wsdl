@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://golfbox.net/web/services/webservice/group" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://golfbox.net/web/services/webservice/group" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema targetNamespace="http://golfbox.net/web/services/webservice/group">
+      <s:include schemaLocation="http://www.golfbox.dk/web/services/webservice/group.asmx?schema=schema1" />
+      <s:import schemaLocation="http://www.golfbox.dk/web/services/webservice/group.asmx?schema=schema2" namespace="http://golfbox.net/web/services/webservice" />
+      <s:import schemaLocation="http://www.golfbox.dk/web/services/webservice/group.asmx?schema=schema3" namespace="http://microsoft.com/wsdl/types/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SetGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:SetGroup" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:SetGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetGroupUserCredentials">
+    <wsdl:part xmlns:q1="http://golfbox.net/web/services/webservice" name="UserCredentials" element="q1:UserCredentials" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupNames" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupNamesUserCredentials">
+    <wsdl:part xmlns:q2="http://golfbox.net/web/services/webservice" name="UserCredentials" element="q2:UserCredentials" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupMembersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupMembers" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupMembersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupMembersUserCredentials">
+    <wsdl:part xmlns:q3="http://golfbox.net/web/services/webservice" name="UserCredentials" element="q3:UserCredentials" />
+  </wsdl:message>
+  <wsdl:portType name="Group">
+    <wsdl:operation name="SetGroup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add / remove the member from the specified group. If the group does not exists it will be created.</wsdl:documentation>
+      <wsdl:input message="tns:SetGroupSoapIn" />
+      <wsdl:output message="tns:SetGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves a list of group names from the club</wsdl:documentation>
+      <wsdl:input message="tns:GetGroupNamesSoapIn" />
+      <wsdl:output message="tns:GetGroupNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMembers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the list of members in a group</wsdl:documentation>
+      <wsdl:input message="tns:GetGroupMembersSoapIn" />
+      <wsdl:output message="tns:GetGroupMembersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Group" type="tns:Group">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetGroup">
+      <soap:operation soapAction="http://golfbox.net/web/services/webservice/SetGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetGroupUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <soap:operation soapAction="http://golfbox.net/web/services/webservice/GetGroupNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetGroupNamesUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMembers">
+      <soap:operation soapAction="http://golfbox.net/web/services/webservice/GetGroupMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetGroupMembersUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Group1" type="tns:Group">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetGroup">
+      <soap12:operation soapAction="http://golfbox.net/web/services/webservice/SetGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetGroupUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <soap12:operation soapAction="http://golfbox.net/web/services/webservice/GetGroupNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetGroupNamesUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupMembers">
+      <soap12:operation soapAction="http://golfbox.net/web/services/webservice/GetGroupMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetGroupMembersUserCredentials" part="UserCredentials" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

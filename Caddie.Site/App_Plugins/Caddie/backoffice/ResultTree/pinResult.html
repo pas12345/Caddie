@@ -1,0 +1,63 @@
+﻿<div class="umb-panel form-horizontal umb-panel-nobody" ng-controller="PinResultController">
+    <div id="match_container_header" class="umb-panel-header">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1 class="headline">Nærmest hullet, par 3</h1>
+                <h1 class="headline">{{matchText}}</h1>
+            </div>
+            <div class="span4">
+                <div class="btn-toolbar umb-btn-toolbar">
+                    <div id="body_body_ctl04_group" class="btn-group">
+                        <a id="body_save" title="Save" class="btn btn-primary btn" data-hotkey="ctrl+s" href='javascript'>Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="umb-pane " style="padding:10px;text-align:left;">
+        <div class="control-group umb-control-group" style="padding:10px;text-align:left;">
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputMembers">Spiller</label>
+                <div class="controls controls-row">
+                    <select class="form-control" id="inputMembers" ng-model="pin.MembershipId"
+                            ng-options="md.Id as md.StringValue for md in players"></select>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inpuText">Hul</label>
+                <div class="controls controls-row">
+                    <input name="inputMatch"
+                           type="text"
+                           id="inpuText"
+                           ng-model="pin.PinName" required>
+                </div>
+            </div>
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inpuDistance">Afstand (i cm)</label>
+                <div class="controls controls-row">
+                    <input name="inpuDistance"
+                           type="number"
+                           id="inputMatch"
+                           ng-model="pin.DistanceInCM" required>
+                </div>
+            </div>
+
+
+            <div class="umb-tab-buttons" detect-fold>
+                <div class="btn-group">
+                    <div class="col-xs-2">
+                        <button type="submit" class="btn btn-warning" ng-click="submit()">Gem</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-8">
+                        <span>{{message}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="list1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>26.63297cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.10142cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox62">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox62</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>19.1788cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="list1_Contents">
+                      <ReportItems>
+                        <Subreport Name="subreport1">
+                          <ReportName>MatchPlayerList</ReportName>
+                          <Parameters>
+                            <Parameter Name="MatchId">
+                              <Value>=Fields!MatchId.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <NoRowsMessage> - ingen medlemmer til denne match -</NoRowsMessage>
+                          <KeepTogether>true</KeepTogether>
+                          <Top>0.1788cm</Top>
+                          <Left>0.47354cm</Left>
+                          <Height>19cm</Height>
+                          <Width>26cm</Width>
+                          <Style>
+                            <Border>
+                              <Color>Aqua</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <Language>da-DK</Language>
+                          </Style>
+                        </Subreport>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style>
+                        <Border>
+                          <Color>Brown</Color>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.07938cm</Size>
+                <CellContents>
+                  <Textbox Name="Textbox235">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value />
+                            <Style />
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox235</rd:DefaultName>
+                    <Style>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="list1_Details_Group">
+                    <DataElementName>Item</DataElementName>
+                  </Group>
+                  <TablixMembers>
+                    <TablixMember />
+                    <TablixMember />
+                  </TablixMembers>
+                  <DataElementName>Item_Collection</DataElementName>
+                  <DataElementOutput>Output</DataElementOutput>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <FixedRowHeaders>true</FixedRowHeaders>
+        <DataSetName>MsReports_MsEvent</DataSetName>
+        <Height>19.28022cm</Height>
+        <Width>26.71235cm</Width>
+        <Style>
+          <Border>
+            <Color>Plum</Color>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>19.45661cm</Height>
+    <Style>
+      <Border>
+        <Color>Red</Color>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>27.27188cm</Width>
+  <Page>
+    <PageHeader>
+      <Height>4.10549cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Rectangle Name="Rectangle2">
+          <ReportItems>
+            <Image Name="logo">
+              <Source>Embedded</Source>
+              <Value>vgcmslogo</Value>
+              <MIMEType>image/jpeg</MIMEType>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.44979cm</Top>
+              <Left>0.43521cm</Left>
+              <Height>2.38095cm</Height>
+              <Width>2.56615cm</Width>
+              <Style />
+            </Image>
+            <Textbox Name="txtVelkommenTil">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=IIf(IsNothing(Fields!MatchText.Value), "", "til " &amp; Fields!MatchText.Value)</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>16pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>2.06623cm</Top>
+              <Left>3.62042cm</Left>
+              <Height>0.75cm</Height>
+              <Width>15.08854cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Sponsor2">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=RTrim(Fields!Sponsor.Value) &amp; " byder velkommen"</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>16pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Sponsor</rd:DefaultName>
+              <Top>1.31623cm</Top>
+              <Left>3.62042cm</Left>
+              <Height>0.75cm</Height>
+              <Width>15.08854cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="MatchDate2">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value rd:LocID="da-DK">=Fields!MatchDate.Value</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>SemiBold</FontWeight>
+                        <Format>D</Format>
+                        <TextDecoration>Underline</TextDecoration>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>MatchDate</rd:DefaultName>
+              <Top>0.50492cm</Top>
+              <Left>3.62042cm</Left>
+              <Height>0.63492cm</Height>
+              <Width>9cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txtMatchform">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!MatchForm.Value</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>2.33074cm</Top>
+              <Left>21.5cm</Left>
+              <Height>0.5cm</Height>
+              <Width>5.25cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!Tee.Value</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.7013cm</Top>
+              <Left>21.5cm</Left>
+              <Height>0.5cm</Height>
+              <Width>5.25cm</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txtBane">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!CourseName.Value</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.13074cm</Top>
+              <Left>21.5cm</Left>
+              <Height>0.5cm</Height>
+              <Width>5.25cm</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="ClubName">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!ClubName.Value</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ClubName</rd:DefaultName>
+              <Top>0.48963cm</Top>
+              <Left>21.5cm</Left>
+              <Height>0.5cm</Height>
+              <Width>5.25cm</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Klub:</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.53074cm</Top>
+              <Left>18.9cm</Left>
+              <Height>0.5cm</Height>
+              <Width>1.75cm</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Bane:</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.13074cm</Top>
+              <Left>18.9cm</Left>
+              <Height>0.5cm</Height>
+              <Width>1.75cm</Width>
+              <ZIndex>9</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox5">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Tee:</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>1.73074cm</Top>
+              <Left>18.9cm</Left>
+              <Height>0.5cm</Height>
+              <Width>1.75cm</Width>
+              <ZIndex>10</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="textbox6">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Matchform:</Value>
+                      <Style>
+                        <FontFamily>Verdana</FontFamily>
+                        <FontWeight>SemiBold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>2.33074cm</Top>
+              <Left>18.9cm</Left>
+              <Height>0.5cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>11</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <KeepTogether>true</KeepTogether>
+          <Top>0.39508cm</Top>
+          <Left>0.35688cm</Left>
+          <Height>3.33999cm</Height>
+          <Width>26.915cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Rectangle>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>0.25in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Mens Section, Vejle Golf Club. Se resultater og find yderligere information på www.vgcms.dk</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>SemiBold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>textbox9</rd:DefaultName>
+          <Left>0.07875in</Left>
+          <Height>0.63492cm</Height>
+          <Width>20cm</Width>
+          <Style>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox7">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="Udskrevet " &amp; Globals!ExecutionTime</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>SemiBold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>textbox7</rd:DefaultName>
+          <Left>7.95277in</Left>
+          <Height>0.25in</Height>
+          <Width>1.98848in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>SemiBold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>textbox8</rd:DefaultName>
+          <Left>10.06625in</Left>
+          <Height>0.25in</Height>
+          <Width>0.315in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageFooter>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
+    <InteractiveHeight>29.7cm</InteractiveHeight>
+    <InteractiveWidth>21cm</InteractiveWidth>
+    <LeftMargin>0.7cm</LeftMargin>
+    <RightMargin>0.7cm</RightMargin>
+    <TopMargin>1cm</TopMargin>
+    <BottomMargin>1cm</BottomMargin>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <Style>
+      <Border>
+        <Style>Solid</Style>
+      </Border>
+    </Style>
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="vgcmsSqlServer">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>62fd2808-c130-42e2-a38a-c0f7042c1185</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="MsReports_MsEvent">
+      <Query>
+        <DataSourceName>vgcmsSqlServer</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.MsEventSelect</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="MSEventId">
+          <DataField>MSEventId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MatchDate">
+          <DataField>MatchDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MatchId">
+          <DataField>MatchId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MatchForm">
+          <DataField>MatchForm</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MatchText">
+          <DataField>MatchText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ImageName">
+          <DataField>ImageName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Strokeplay">
+          <DataField>Strokeplay</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Sponsor">
+          <DataField>Sponsor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseName">
+          <DataField>CourseName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseDetailId">
+          <DataField>CourseDetailId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Par">
+          <DataField>Par</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Tee">
+          <DataField>Tee</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Gender">
+          <DataField>Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseRating">
+          <DataField>CourseRating</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Slope">
+          <DataField>Slope</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Remarks">
+          <DataField>Remarks</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ImageText">
+          <DataField>ImageText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Official">
+          <DataField>Official</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="ClubName">
+          <DataField>ClubName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseId">
+          <DataField>CourseId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="timestamp">
+          <DataField>timestamp</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MsReports</rd:DataSetName>
+        <rd:TableName>MsEvent</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>MsEventTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code>Public Function StripHtml(ByVal value As String) as String
+        Dim html As String = System.Web.HttpUtility.HtmlDecode(value)
+        Dim regExp As New System.Text.RegularExpressions.Regex("&lt;(.|\n)+?&gt;", Text.RegularExpressions.RegexOptions.IgnoreCase)
+
+        'Replace all HTML tag matches with the empty string
+        dim output as string = regExp.Replace(html, "")
+        regExp = Nothing
+        Return output
+End Function
+</Code>
+  <EmbeddedImages>
+    <EmbeddedImage Name="vgcmslogo">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>da-DK</Language>
+  <CodeModules>
+    <CodeModule>System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</CodeModule>
+  </CodeModules>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>ba69d481-36c3-4220-bd21-b61eed596f7e</rd:ReportID>
+</Report>

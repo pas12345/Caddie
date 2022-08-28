@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English (UK)" localName="English (UK)" lcid="" culture="en-GB">
+  <area alias="caddie">
+  </area>
+  <area alias="treeHeaders">
+    <key alias="caddie">Caddie tree header</key>
+  </area>
+  <area alias="sections">
+    <key alias="caddie">Caddie section</key>
+  </area>
+</language>

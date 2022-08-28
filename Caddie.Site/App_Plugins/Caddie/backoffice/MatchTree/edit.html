@@ -1,0 +1,119 @@
+﻿<div class="umb-panel form-horizontal umb-panel-nobody" ng-controller="MatchEditController">
+    <div id="match_container_header" class="umb-panel-header">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1 class="headline">Match administration</h1>
+                <h1 class="headline">{{matchText}}</h1>
+            </div>
+            <!--<div class="span4">
+                <div class="btn-toolbar umb-btn-toolbar">
+                    <div id="body_body_ctl04_group" class="btn-group">
+                        <a id="body_save" title="Save" class="btn btn-primary btn" data-hotkey="ctrl+s" href='javascript'>Save</a>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="umb-pane " style="padding:10px;text-align:left;">
+        <div class="control-group umb-control-group" style="padding:10px;text-align:left;">
+
+            <div class="control-group umb-control-group">
+                <div class="umb-el-wrap">
+                    <label class="control-label">Dato</label>
+                    <div class="controls controls-row">
+                        <simpledatepicker field="match.MatchDate" dateformat="YYYY-MM-DD" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap ">
+                <label class="control-label" for="inputText">Tekst</label>
+                <div class="controls controls-row">
+                    <input name="inputText"
+                           type="text"
+                           id="inputText"
+                           ng-model="match.MatchText" required>
+
+                </div>
+            </div>
+
+            <div class="umb-el-wrap ">
+                <label class="control-label" for="inputSponsor">Sponsor</label>
+                <div class="controls controls-row">
+                    <input name="inputSponsor"
+                           type="text"
+                           id="inputSponsor"
+                           ng-model="match.Sponsor" required>
+                </div>
+            </div>
+            
+            <!--http://www.nibble.be/?p=453-->
+            <umb-control-group label="Sponsor logo" description="">
+                <umb-media-picker ng-model="match.SponsorLogoId" />
+            </umb-control-group>
+
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputMatchform">Matchform</label>
+                <div class="controls controls-row">
+                    <select class="form-control" id="inputMatchform" ng-model="match.MatchformId"
+                            ng-options="md.Id as md.StringValue for md in matchforms">
+                    </select>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputCourse">Bane</label>
+                <div class="controls controls-row">
+                    <select class="form-control" id="inputCourse" ng-model="match.CourseDetailId"
+                            ng-options="md.Id as md.StringValue for md in courses"
+                            ng-change="courseChange(match.CourseDetailId)">
+                    </select>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap ">
+                <label class="control-label" for="inputPar">Par</label>
+                <div class="controls controls-row">
+                    <input name="inputPar"
+                           type="number"
+                           id="inputPar"
+                           ng-model="match.Par" required>
+                    <p>Ret her kun hvis det er midlertidigt - ellers bør banen rettes</p>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap ">
+                <label class="control-label" for="inputShootout">Shootout</label>
+                <div class="controls controls-row">
+                    <input name="inputShootout"
+                            type="checkbox"
+                            id="inputShootout"
+                            ng-model="match.Shootout" required>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap ">
+                <label class="control-label" for="inputOfficial">Officiel</label>
+                <div class="controls controls-row">
+                    <input name="inputOfficial"
+                            type="checkbox"
+                            id="inputOfficial"
+                            ng-model="match.Official" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-2">
+                    <button type="submit" class="btn btn-warning" ng-click="save()">Gem</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8">
+                    <span>{{message}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      

@@ -1,0 +1,12 @@
+﻿<div ng-controller="matchSettlementController">
+    <div class="umb-pane">
+        <h4>{{currentNode.name}}</h4>
+        <p>
+            Når alle scores er indtastet skal matchen lukkes for at tildele Midspar points og sætte Overall vinderen
+        </p>
+        <p>{{message}}</p>
+        <div class="btn-toolbar pull-right umb-btn-toolbar">
+            <a href="" class="btn btn-primary" ng-click="settleMatch(currentNode.id)" prevent-default>Afslut matchen!</a>
+        </div>
+    </div>
+</div>

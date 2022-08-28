@@ -1,0 +1,24 @@
+﻿<div class="umb-panel form-horizontal umb-panel-nobody" ng-controller="ClubController">
+    <div class="umb-pane " style="padding:10px;text-align:left;">
+        <div class="control-group umb-control-group" style="padding:10px;text-align:left;">
+
+            <div class="umb-el-wrap ">
+                <label class="control-label" for="inputClubName">Navn</label>
+                <div class="controls controls-row">
+                    <input name="inputClubName"
+                           type="text"
+                           id="inputClubName"
+                           ng-model="club.StringValue" required>
+                </div>
+            </div>
+
+            <div class="umb-tab-buttons" detect-fold>
+                <a class="btn btn-link" ng-click="cancel()">Fortryd</a>
+                <button type="submit" data-hotkey="ctrl+s" class="btn btn-success" ng-click="submit()">
+                    Opret
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

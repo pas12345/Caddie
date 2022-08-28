@@ -1,0 +1,62 @@
+﻿<div class="umb-panel form-horizontal umb-panel-nobody" ng-controller="MatchplayEditMatchController">
+    <div id="match_container_header" class="umb-panel-header">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1 class="headline">Administration, hulspils matcher</h1>
+                <h1 class="headline">{{matchText}}</h1>
+            </div>
+            <div class="span4">
+                <div class="btn-toolbar umb-btn-toolbar">
+                    <div id="body_body_ctl04_group" class="btn-group">
+                        <a id="body_save" title="Save" class="btn btn-primary btn" data-hotkey="ctrl+s" href='javascript'>Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="umb-pane " style="padding:10px;text-align:left;">
+        <div class="control-group umb-control-group" style="padding:10px;text-align:left;">
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputTeams1">Hold 1</label>
+                <div class="controls controls-row">
+                    <select class="form-control" id="inputTeams1" ng-model="match.LeagueTeamId1"
+                            ng-options="md.LeagueTeamId as md.TeamName for md in teams1"></select>
+                </div>
+            </div>
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputTeams2">Hold 2</label>
+                <div class="controls controls-row">
+                    <select class="form-control" id="inputTeams2" ng-model="match.LeagueTeamId2"
+                            ng-options="md.LeagueTeamId as md.TeamName for md in teams2"></select>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputPlayround">Runde</label>
+                <div class="controls controls-row">
+                    <input name="inputPlayround"
+                           type="number"
+                           id="inputPlayround"
+                           ng-model="match.Playround" required>
+                </div>
+            </div>
+
+            <div class="umb-tab-buttons" detect-fold>
+                <div class="btn-group" >
+                    <a class="btn" href="#/caddie/matchplayTree/matchlist/{{match.LeagueId}}">
+                        <localize key="buttons_returnToList">Return to list</localize>
+                    </a>
+                    <div class="col-xs-2">
+                        <button type="submit" class="btn btn-warning" ng-click="submit()">Gem</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-8">
+                        <span>{{message}}</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

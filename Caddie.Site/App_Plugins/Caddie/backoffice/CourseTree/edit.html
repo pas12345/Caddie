@@ -1,0 +1,26 @@
+﻿<form name="objectForm"
+      ng-controller="ClubEditController"
+      val-form-manager>
+    <umb-panel>
+        <umb-header>
+            <h1><span class="icon-pulse"></span>Ret klub navn</h1>
+        </umb-header>
+        <div class="umb-panel-body umb-scrollable row-fluid">
+            <div class="tab-content form-horizontal" style="padding-bottom: 90px">
+                <div class="umb-pane">
+                    <umb-control-group label="Navn">
+                        <input type="text" ng-model="club.StringValue" name="inputClubName" />
+                    </umb-control-group>
+                </div>
+
+                <div class="umb-tab-buttons" detect-fold>
+                    <a class="btn btn-link" ng-click="cancel()">Fortryd</a>
+                    <button type="submit" data-hotkey="ctrl+s" class="btn btn-success" ng-click="submit()">
+                            Opdater
+                    </button>
+                </div>
+            </div>
+        </div>
+    </umb-panel>
+</form>
+

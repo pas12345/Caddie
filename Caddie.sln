@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caddie.Site", "Caddie.Site\Caddie.Site.csproj", "{0A1F9E93-3AA7-4603-A686-7E434165E932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caddie", "Caddie\Caddie.csproj", "{59E49DAD-C697-4A25-8370-1880D0767654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caddie.Data", "Caddie.Data\Caddie.Data.csproj", "{1F607F08-F315-4B14-A349-E9B74B9EE27E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caddie.Test", "Caddie.Test\Caddie.Test.csproj", "{EF1ABBE9-768B-4959-B448-62165B44F17C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSReports", "MSReports\MSReports.csproj", "{1CCCF232-9527-4AF5-9B88-F4F461E642FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A1F9E93-3AA7-4603-A686-7E434165E932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1F9E93-3AA7-4603-A686-7E434165E932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1F9E93-3AA7-4603-A686-7E434165E932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1F9E93-3AA7-4603-A686-7E434165E932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59E49DAD-C697-4A25-8370-1880D0767654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E49DAD-C697-4A25-8370-1880D0767654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E49DAD-C697-4A25-8370-1880D0767654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E49DAD-C697-4A25-8370-1880D0767654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F607F08-F315-4B14-A349-E9B74B9EE27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F607F08-F315-4B14-A349-E9B74B9EE27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F607F08-F315-4B14-A349-E9B74B9EE27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F607F08-F315-4B14-A349-E9B74B9EE27E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1ABBE9-768B-4959-B448-62165B44F17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1ABBE9-768B-4959-B448-62165B44F17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1ABBE9-768B-4959-B448-62165B44F17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1ABBE9-768B-4959-B448-62165B44F17C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CCCF232-9527-4AF5-9B88-F4F461E642FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCCF232-9527-4AF5-9B88-F4F461E642FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCCF232-9527-4AF5-9B88-F4F461E642FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCCF232-9527-4AF5-9B88-F4F461E642FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://paulsroom.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Caddie.Data\\Caddie.Data.csproj
+		SccProjectName1 = Caddie.Data
+		SccLocalPath1 = Caddie.Data
+		SccProjectUniqueName2 = Caddie.Site\\Caddie.Site.csproj
+		SccProjectName2 = Caddie.Site
+		SccLocalPath2 = Caddie.Site
+		SccProjectUniqueName3 = Caddie.Test\\Caddie.Test.csproj
+		SccProjectName3 = Caddie.Test
+		SccLocalPath3 = Caddie.Test
+		SccProjectUniqueName4 = Caddie\\Caddie.csproj
+		SccProjectName4 = Caddie
+		SccLocalPath4 = Caddie
+		SccProjectUniqueName5 = MSReports\\MSReports.csproj
+		SccProjectName5 = MSReports
+		SccLocalPath5 = MSReports
+	EndGlobalSection
+EndGlobal

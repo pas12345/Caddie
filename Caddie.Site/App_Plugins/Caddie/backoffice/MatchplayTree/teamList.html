@@ -1,0 +1,66 @@
+﻿<div class="umb-panel form-horizontal umb-panel-nobody" ng-controller="MatchplayTeamListController">
+    <div id="match_container_header" class="umb-panel-header">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1 class="headline">Oprettelse og redigering af hold til hulspil</h1>
+                <h1 class="headline">{{matchText}}</h1>
+            </div>
+            <div class="span4">
+                <div class="btn-toolbar umb-btn-toolbar">
+                    <div id="body_body_ctl04_group" class="btn-group">
+                        <a id="body_save" title="Save" class="btn btn-primary btn" data-hotkey="ctrl+s" href='javascript'>Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="umb-panel-body">
+        <div class="umb-pane">
+
+            <div class="umb-sub-header">
+
+                <form class="form-search pull-right ng-pristine ng-valid" novalidate="">
+                    <div class="inner-addon left-addon">
+                        <i class="icon icon-search"></i>
+                        <input type="text" class="form-control ng-pristine ng-valid" localize="placeholder" placeholder="Type to search..." ng-model="searchFilter" prevent-enter-submit="" no-dirty-check="" ng-change="search(searchFilter)">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="umb-listview">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td style="width:35px"></td>
+                            <td>
+                                <p>VGC Nr.</p>
+                            </td>
+                            <td ng-hide="isSingle">
+                                <p>VGC Nr. (partner)</p>
+                            </td>
+                            <td>
+                                <p>Holdnavn</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="p in teams" ng-class="{selected: isRowSelected(p.LeagueTeamId)}">
+                            <td style="width: 35px">
+                                <a data-ng-click="delete(p.LeagueTeamId)">
+                                    <i class="icon-delete"></i>
+                                </a>
+                            </td>
+                            <td>{{p.VgcNo}}</td>
+                            <td ng-hide="isSingle">{{p.VgcNoPartner}}</td>
+                            <td>
+                                <a href="#/caddie/matchplayTree/editTeam/{{p.LeagueTeamId}}">{{p.TeamName}}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

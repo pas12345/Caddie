@@ -1,0 +1,86 @@
+﻿<div class="umb-panel form-horizontal umb-panel-nobody" ng-controller="TourController">
+    <div class="umb-pane " style="padding:10px;text-align:left;">
+        <div class="control-group umb-control-group" style="padding:10px;text-align:left;">
+
+            <div class="control-group umb-control-group">
+                <div class="umb-el-wrap">
+                    <label class="control-label">Dato</label>
+                    <div class="controls controls-row">
+                        <simpledatepicker field="tour.TourDate" dateformat="YYYY-MM-DD" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap ">
+                <label class="control-label" for="inputText">Tekst</label>
+                <div class="controls controls-row">
+                    <input name="inputText"
+                           type="text"
+                           id="inputText"
+                           ng-model="tour.Description" required>
+                </div>
+            </div>
+
+            <!--http://www.nibble.be/?p=453-->
+            <umb-control-group label="Sponsor logo" description="">
+                <umb-media-picker ng-model="tour.SponsorLogoId" required />
+            </umb-control-group>
+
+            <div class="control-group umb-control-group">
+                <div class="umb-el-wrap">
+                    <label class="control-label">Sidste tilmelding</label>
+                    <div class="controls controls-row">
+                        <simpledatepicker field="tour.LastRegistrationDate" dateformat="YYYY-MM-DD" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span3" for="openForSignUp">Åben for tilmelding</label>
+                <div class="controls">
+                    <input type="checkbox" id="openForSignUp"
+                           ng-model="tour.OpenForSignUp" />
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label span3" for="inputMaxNo">Max antal</label>
+                <div class="controls">
+                    <input type="number" id="inputMaxNo" placeholder="000"
+                           ng-model="tour.MaxNoOfMembers" />
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <label class="control-label span3" for="noOfMembers">Antal tilmeldte</label>
+                <div class="controls">
+                    <input type="number" id="noOfMembers" placeholder="000"
+                           ng-model="tour.NoOfMembers" />
+                </div>
+            </div>
+
+            <!--<div class="control-group">
+                <label class="control-label span3" for="urlDescription">Link til beskrivelse</label>
+                <div class="controls">
+                    <input type="number" id="urlDescription" placeholder="000"
+                           ng-model="tour.UrlDescription" />
+                    <a ng-if="!node" href="" ng-click="openContentPicker()" prevent-default="" class="ng-scope">
+                        <localize key="general_choose" class="ng-isolate-scope ng-scope">Choose</localize>...
+                    </a>
+                </div>
+            </div>-->
+
+            <div class="form-group">
+                <div class="col-xs-2">
+                    <button type="submit" class="btn btn-warning" ng-click="save()">Gem</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8">
+                    <span>{{message}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

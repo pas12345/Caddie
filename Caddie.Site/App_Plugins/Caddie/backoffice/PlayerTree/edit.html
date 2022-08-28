@@ -1,0 +1,66 @@
+﻿<form name="objectForm"
+      ng-controller="PlayerEditController"
+      ng-show="loaded"
+      val-form-manager>
+    <umb-panel>
+        <umb-header>
+            <h1><span class="icon-pulse"></span>Medlems administration</h1>
+            <div class="span5">
+                <div class="btn-toolbar pull-right umb-btn-toolbar">
+                    <umb-options-menu ng-show="currentNode"
+                                      current-node="currentNode"
+                                      current-section="{{currentSection}}">
+                    </umb-options-menu>
+                </div>
+            </div>
+        </umb-header>
+        <div class="umb-panel-body umb-scrollable row-fluid">
+            <div class="tab-content form-horizontal" style="padding-bottom: 90px">
+                <div class="umb-pane">
+                    <umb-control-group label="VGC nr." description="Medlems nr. i VGC">
+                        <input type="number" ng-model="player.VgcNo" id="inputVgcNo" readonly/>
+                    </umb-control-group>
+
+                    <umb-control-group label="Fornavn">
+                        <input type="text" ng-model="player.Firstname" name="inputFirstname" />
+                    </umb-control-group>
+
+                    <umb-control-group label="Efternavn" description="">
+                        <input type="text" ng-model="player.Lastname" name="inputLastname" />
+                    </umb-control-group>
+
+                    <umb-control-group label="Post nr." description="">
+                        <input type="text" ng-model="player.ZipCode" id="inputZipcode" />
+                    </umb-control-group>
+
+                    <umb-control-group label="By" description="">
+                        <input type="text" ng-model="player.City" id="inputCity" />
+                    </umb-control-group>
+
+                    <umb-control-group label="Email" description="">
+                        <input type="text" ng-model="player.Email" id="inputEmail" />
+                    </umb-control-group>
+
+                    <umb-control-group label="Telefon" description="">
+                        <input type="text" ng-model="player.Phone" id="inputPhone" />
+                    </umb-control-group>
+
+                    <umb-control-group label="Hcp index" description="">
+                        <input type="number" step="0.1" ng-model-options="{updateOn: 'blur change'}" ng-model="player.HcpIndex" id="inputZipcode" />
+                    </umb-control-group>
+                </div>
+
+                <div class="umb-tab-buttons" detect-fold>
+                    <div class="btn-group" ng-hide="readOnly">
+                        <button type="submit" data-hotkey="ctrl+s" class="btn btn-success" ng-click="save()" ng-show="player.MemberShipId > 0">
+                            Opdater
+                        </button>
+                        <button type="submit" data-hotkey="ctrl+s" class="btn btn-success" ng-click="save()" ng-show="player.MemberShipId == 0">
+                            Opret
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </umb-panel>
+</form>

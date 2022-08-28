@@ -1,0 +1,106 @@
+﻿<div ng-controller="ResultController">
+    <div class="umb-pane">
+       x {{message}} x
+        <form class="form-horizontal" role="form">
+            <div class="row panel">
+                <div class="col-xs-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="EnterVgcNo" placeholder="Vgc nr." ng-model="vm.result.vgcNo" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary pull-right" ng-click="GetResult(vm.result.vgcNo)">Hent</button>
+                        </span>
+                    </div>
+                    <div class="help">Vgc Nr.</div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <select class="form-control" id="selectPlayer" ng-model="vm.result.vgcNo" ng-options="md.vgcNo as md.fullName2 for md in vm.results"
+                                ng-change="PlayerChange(vm.result.vgcNo)"></select>
+                    </div>
+                    <div class="help">Hcp/index: {{vm.result.hcp}}/{{vm.result.hcpIndex}}</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-2" ng-show="vm.showBruttoNetto"
+                     ng-class="{'has-error':resultForm.inputBrutto.$invalid &&
+                            resultForm.inputBrutto.$dirty}">
+                    <input class="form-control pull-right"
+                           id="inputBrutto"
+                           name="inputBrutto"
+                           type="number"
+                           placeholder="000"
+                           ng-model="vm.result.brutto"
+                           ng-change="onBruttoChanged()"
+                           ng-required="vm.showBruttoNetto">
+                    <div class="help text-center">Brutto</div>
+                </div>
+                <div class="col-xs-2" ng-show="vm.showBruttoNetto"
+                     ng-class="{'has-error':resultForm.inputNetto.$invalid &&
+                            resultForm.inputNetto.$dirty}">
+                    <input class="form-control pull-right"
+                           id="inputNetto"
+                           name="inputNetto"
+                           type="number"
+                           placeholder="000"
+                           ng-model="vm.result.netto"
+                           ng-required="vm.showBruttoNetto">
+                    <div class="help text-center">Netto</div>
+                </div>
+                <div class="col-xs-2" ng-show="vm.showPut"
+                     ng-class="{'has-error':resultForm.inputPuts.$invalid &&
+                                   resultForm.inputPuts.$dirty}">
+                    <input class="form-control"
+                           id="inputPuts"
+                           name="inputPuts"
+                           type="number"
+                           placeholder="00"
+                           ng-model="vm.result.puts"
+                           ng-required="vm.showPut">
+                    <div class="help text-center">Puts</div>
+                </div>
+                <div class="col-xs-2" ng-class="{'has-error':resultForm.inputPoints.$invalid &&
+                                    resultForm.inputPoints.$dirty}">
+                    <input class="form-control"
+                           id="inputPoints"
+                           name="inputPoints"
+                           type="number"
+                           placeholder="00"
+                           ng-model="vm.result.points"
+                           required>
+                    <div class="help text-center">Points</div>
+                </div>
+                <div class="col-xs-2" ng-class="{'has-error':resultForm.inputBirdies.$invalid &&
+                                   resultForm.inputBirdies.$dirty}">
+                    <input class="form-control"
+                           id="inputBirdies"
+                           name="inputBirdies"
+                           type="number"
+                           placeholder="0"
+                           ng-model="vm.result.birdies">
+                    <div class="help text-center">Birdies</div>
+                </div>
+                <div class="col-xs-2" ng-class="{'has-error':resultForm.inputShootOut.$invalid &&
+                                   resultForm.inputShootOut.$dirty}">
+                    <input class="form-control"
+                           id="inputShootOut"
+                           name="inputShootOut"
+                           type="number"
+                           placeholder="0"
+                           ng-model="vm.result.shootout">
+                    <div class="help text-center">ShootOut</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-2">
+                    <button type="submit" class="btn btn-warning pull-right" ng-click="submit()">Gem</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8">
+                    <span>{{vm.message}}</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

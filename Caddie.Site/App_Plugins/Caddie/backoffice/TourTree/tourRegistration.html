@@ -1,0 +1,31 @@
+﻿<body class="umbracoDialog umb-dialog">
+        <div class="umb-pane" style="padding:10px;text-align:left;" 
+             ng-controller="TourRegistrationController">
+
+            <h2>{{currentNode.name}}</h2>
+            <p>Tilmeld spiller til arrangement</p>
+            <p>{{IsOpenText}}</p>
+            <div class="control-group umb-control-group" style="">
+
+                <div class="umb-el-wrap">
+                    <label class="control-label" for="tourMember">Vælg spiller:</label>
+                    <div class="controls controls-row">
+                        <select class="form-control" id="tourMember" ng-model="registration.VgcNo"
+                                ng-options="md.VgcNo as md.FullName for md in players"
+                                ng-change="PlayerChange()"></select>
+                    </div>
+                </div>
+
+                <div class="umb-pane btn-toolbar umb-btn-toolbar" style="">
+                    <div class="control-group umb-control-group" style="">
+                        <a href="#" class="btn btn-link" onclick="UmbClientMgr.closeModalWindow()">Fortryd</a>
+                        <a href="" class="btn btn-primary" ng-click="Register()" 
+                           prevent-default>{{btnText}}</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <p>{{message}}</p>
+        </div>
+</body>

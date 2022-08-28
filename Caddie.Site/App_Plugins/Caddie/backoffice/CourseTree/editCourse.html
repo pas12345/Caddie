@@ -1,0 +1,72 @@
+﻿<div class="umb-panel form-horizontal umb-panel-nobody" ng-controller="CourseEditController">
+    <div id="match_container_header" class="umb-panel-header">
+        <div class="row-fluid">
+            <div class="span8">
+                <h1 class="headline">Administration af bane opsætning</h1>
+                <h1 class="headline">{{course.Description}}</h1>
+            </div>
+            <div class="span4">
+                <div class="btn-toolbar umb-btn-toolbar">
+                    <div id="body_body_ctl04_group" class="btn-group">
+                        <a id="body_save" title="Save" class="btn btn-primary btn" data-hotkey="ctrl+s" href='javascript'>Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="umb-pane " style="padding:10px;text-align:left;">
+        <div class="control-group umb-control-group" style="padding:10px;text-align:left;">
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputPar">Par</label>
+                <div class="controls controls-row">
+                    <input name="inputPar"
+                           type="number"
+                           id="inputPar"
+                           ng-model="courseDetail.Par" required>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputSlope">Slope</label>
+                <div class="controls controls-row">
+                    <input name="inputSlope"
+                           type="number"
+                           id="inputSlope"
+                           ng-model="courseDetail.Slope" required>
+                </div>
+            </div>
+
+            <div class="umb-el-wrap">
+                <label class="control-label" for="inputCourseRating">CourseRating</label>
+                <div class="controls controls-row">
+                    <input name="inputCourseRating"
+                           type="number"
+                           id="inputCourseRating"
+                           ng-model="courseDetail.CourseRating" required>
+                </div>
+            </div>
+
+            <div class="umb-panel-footer">
+                <div class="umb-el-wrap umb-panel-buttons">
+                    <div class="btn-toolbar umb-btn-toolbar pull-right">
+                        <a class="btn" href="#/caddie/courseTree/courselist/{{courseDetail.ClubId}}">
+                            Tilbage til listen
+                        </a>
+
+                        <div class="btn-group dropup">
+                            <!-- primary button -->
+                            <a class="btn btn-success" href="#" ng-click="submit()" prevent-default>
+                                Save
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
